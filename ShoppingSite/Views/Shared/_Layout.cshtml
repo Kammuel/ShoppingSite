@@ -8,18 +8,24 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-fixed-top" style="background-color: orange; margin-bottom: 20px;">
+	<div class="navbar navbar-fixed-top" style="background-color: orange; margin-bottom: 20px;">
 		<div class="header">
 			Welcome to Kamm's Shopping Site: an example in LINQ syntax!
 		</div>
-    </div>
-    <div class="container body-content shopBox">
-        @RenderBody()
-       
-    </div>
+	</div>
+	<div class="searchBar">
+		Customize your search!
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+		<button type="submit" class="searchButton">Search!</button>
+	</div>
+	<div class="container body-content shopBox">
+
+		@RenderBody()
+
+	</div>
+
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/bootstrap")
+	@RenderSection("scripts", required: false)
 </body>
 </html>
